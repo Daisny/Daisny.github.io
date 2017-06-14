@@ -91,11 +91,16 @@
                     return;
                 }
 
-                D.invokeShare(cmd, {
+                var data = {
                     title: '直接拉起啦',
                     content: '直接拉起的内容'
+                };
 
-                })
+                if('facebook,twitter,messenger,line,whatsapp'.indexOf(cmd) != -1){
+                    data.en = true;
+                }
+
+                D.invokeShare(cmd, data)
             });
         });
     </script>
