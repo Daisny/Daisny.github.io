@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
   <meta property="og:url" content="https://chriscindy.gitlab.io/plain-html/sdk-test.html" />
-  <meta property="og:title" content="滴滴一下，马上出发" />
+  <meta property="og:title" content="滴滴一下，马上出发2" />
   <meta property="og:description" content="滴滴打车是时下最热的手机打车神器。覆盖最广，用户最多。实时叫车，百秒应答，享受专车待遇，马上下载试试吧~" />
   <meta property="og:image" content="http://static.diditaxi.com.cn/activity/img-mall/share.jpg" />
 
@@ -58,7 +58,7 @@
   </div>
 </div>
   123
-  <script src="./sdk.min.js"></script>
+<!--   <script src="./sdk.min.js"></script>
   <script>
     var btn = document.getElementById('demo-button');
     
@@ -68,6 +68,57 @@
         platform: 'twitter'
       })
     }
-  </script>
+  </script> -->
+   <script type="text/javascript" src="//img6.didistatic.com/static/tms/cdn/z/zepto/zepto/1.0.1/zepto.min.js"></script>
+    <script>
+    function refresh(){
+        location.href = location.href + '?v='+new Date().getTime()
+    }
+        function $log(msg){
+            if(typeof msg == 'string'){
+                msg = msg;
+            }else if(msg){
+                msg = JSON.stringify(msg);
+            }
+            $('body').prepend(msg + '')
+        }
+    </script>
+    <script type="text/javascript" src="./share.js"></script>
+
+    <script>
+    var log = document.getElementById('log');
+    window.onerror = function(){
+        log.innerHTML = JSON.stringify(arguments)
+    }
+        $(function() {
+            //log.innerHTML = D;
+            /*D.setShare({
+                title: '新版share',
+                content: '新版sharecontent',
+                icon: 'http://static.udache.com/activity/2017-point-game/images/share-img.png',
+                weixin_timeline_title: '朋友圈标题'
+            })
+            D.setShare({
+                type: 'image',
+                image: 'http://static.udache.com/activity/2017-point-game/images/share-img.png'
+            })*/
+            $('.btn').on('click', function(){
+                var cmd = $(this).data('cmd');
+                if(cmd == 'share'){
+                    D.invokeShare();
+                    return;
+                }
+                var data = {
+                    title: '直接拉起啦',
+                    content: '直接拉起的内容',
+                    url: 'https://daisny.github.io/index2.html'
+                };
+                if('facebook,twitter,messenger,line,whatsapp'.indexOf(cmd) != -1){
+                    data.en = true;
+                }
+                D.invokeShare(cmd, data)
+            });
+        });
+    </script>
 </body>
 </html>
