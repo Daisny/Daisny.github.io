@@ -1098,7 +1098,7 @@ function prepareCfg() {
 	(0, _assign2.default)(cfg, {
 		content: cfg.content || cfg.desc || cfg.text,
 		icon: cfg.icon || cfg.imgUrl,
-		url: cfg.url || cfg.link
+		url: cfg.url || cfg.link || cfg.href
 	});
 
 	return cfg;
@@ -1119,12 +1119,12 @@ function setShare(cfg) {
 }
 
 function shareOneChannel(channel, cfg) {
-	if (_env2.default.is('passenger,driver')) {
-		var data = prepareCfg(cfg);
+	var data = prepareCfg(cfg);
 
+	if (_env2.default.is('passenger,driver')) {
 		(0, _share2.shareNative)(channel, data);
 	} else {
-		(0, _share3.setShareInte)(channel, cfg);
+		(0, _share3.setShareInte)(channel, data);
 	}
 }
 
@@ -2349,6 +2349,8 @@ function setShareInte(channel, opt) {
     shareUrl: opt.url,
     flatform: channel
   };
+
+  $log(cfg);
 
   sdk.setShare(cfg);
 }
