@@ -57,6 +57,17 @@
     <a href="line://msg/text/https%3A%2F%2Fchriscindy.gitlab.io%2Fplain-html%2Fsdk-test.html">点我分享Line</a>
   </div>
 </div>
-
+  
+  <script src="./sdk.min.js"></script>
+  <script>
+    var btn = document.getElementById('demo-button');
+    
+    btn.onclick = function(){
+      sdk.setShare({
+        shareUrl: 'https://daisny.github.io/site/index3.html',
+        platform: 'twitter'
+      })
+    }
+  </script>
 </body>
 </html>
