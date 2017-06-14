@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta property="og:url" content="https://daisny.github.io/index.html" />
+  <meta property="og:title" content="滴滴一下，马上出发" />
+  <meta property="og:description" content="滴滴打车是时下最热的手机打车神器。覆盖最广，用户最多。实时叫车，百秒应答，享受专车待遇，马上下载试试吧~" />
+  <meta property="og:image" content="http://static.diditaxi.com.cn/activity/img-mall/share.jpg" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="滴滴一下，马上出发" />
+  <meta name="twitter:description" content="滴滴打车是时下最热的手机打车神器。覆盖最广，用户最多。实时叫车，百秒应答，享受专车待遇，马上下载试试吧~" />
+  <meta name="twitter:image" content="http://static.diditaxi.com.cn/activity/img-mall/share.jpg" />
+    <title>demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <style>
+        .btn{
+            display: inline-block;
+            padding: 10px 10px;
+            min-width: 80px;
+            text-align: center;
+            border-radius: 3px;
+            background-color: green;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            color: white;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>this is share</h1>
+    <span class="btn" data-cmd="weixin_appmsg">微信分享</span>
+    <span class="btn" data-cmd="weixin_timeline">朋友圈分享</span>
+    <span class="btn" data-cmd="qq_appmsg">QQ分享</span>
+    <span class="btn" data-cmd="qzone">QQ空间分享</span>
+    <span class="btn" data-cmd="share">分享面板</span>
+    <span class="btn" data-cmd="twitter">twitter</span>
+    <span class="btn" data-cmd="whatsapp">whatsapp</span>
+    <span class="btn" data-cmd="messenger">messenger</span>
+    <span class="btn" data-cmd="line">line</span>
+    <span class="btn" data-cmd="facebook">facebook</span>
+    <a class="btn" href="javascript:refresh()">刷新</a>
+    <div id="log"></div>
+    <script type="text/javascript" src="//img6.didistatic.com/static/tms/cdn/z/zepto/zepto/1.0.1/zepto.min.js"></script>
+    <script>
+    function refresh(){
+        location.href = location.href + '?v='+new Date().getTime()
+    }
+        function $log(msg){
+            if(typeof msg == 'string'){
+                msg = msg;
+            }else if(msg){
+                msg = JSON.stringify(msg);
+            }
+
+            $('body').prepend(msg + '')
+        }
+    </script>
+    <script type="text/javascript" src="./share.js"></script>
+
+    <script>
+    var log = document.getElementById('log');
+
+
+    window.onerror = function(){
+        log.innerHTML = JSON.stringify(arguments)
+    }
+        $(function() {
+            //log.innerHTML = D;
+            /*D.setShare({
+                title: '新版share',
+                content: '新版sharecontent',
+                icon: 'http://static.udache.com/activity/2017-point-game/images/share-img.png',
+                weixin_timeline_title: '朋友圈标题'
+            })
+
+            D.setShare({
+                type: 'image',
+                image: 'http://static.udache.com/activity/2017-point-game/images/share-img.png'
+            })*/
+
+            $('.btn').on('click', function(){
+                var cmd = $(this).data('cmd');
+
+                if(cmd == 'share'){
+                    D.invokeShare();
+                    return;
+                }
+
+                var data = {
+                    title: '直接拉起啦',
+                    content: '直接拉起的内容',
+                    url: 'https://daisny.github.io/index.html'
+                };
+
+                if('facebook,twitter,messenger,line,whatsapp'.indexOf(cmd) != -1){
+                    data.en = true;
+                }
+
+                D.invokeShare(cmd, data)
+            });
+        });
+    </script>
+</body>
+
+</html>
