@@ -601,7 +601,7 @@ var sdkUrlConfig = {
         url: '//webapp.didistatic.com/static/webapp/shield/z/didi-sdk/didi-sdk/0.1.12/sdk.min.js',
         reg: /static\/webapp\/shield\/z\/didi-sdk\/didi-sdk/
     },
-    shareInter: {
+    shareInte: {
         url: '//static.galileo.xiaojukeji.com/static/tms/shield/z/didi-intsdk/didi-intsdk/0.0.1/intsdk.min.js'
     },
     driverBridge: {
