@@ -1,108 +1,74 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta property="og:url" content="https://daisny.github.io/index.html" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+  <meta property="og:url" content="https://chriscindy.gitlab.io/plain-html/sdk-test.html" />
   <meta property="og:title" content="滴滴一下，马上出发" />
   <meta property="og:description" content="滴滴打车是时下最热的手机打车神器。覆盖最广，用户最多。实时叫车，百秒应答，享受专车待遇，马上下载试试吧~" />
-  <meta property="og:image" content="http://static.diditaxi.com.cn/activity/img-mall/share.jpg" />
+  <meta property="og:image" content="http://mofang.xiaojukeji.com/images/brand/logo/didichuxing-01.png" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="滴滴一下，马上出发" />
   <meta name="twitter:description" content="滴滴打车是时下最热的手机打车神器。覆盖最广，用户最多。实时叫车，百秒应答，享受专车待遇，马上下载试试吧~" />
-  <meta name="twitter:image" content="http://static.diditaxi.com.cn/activity/img-mall/share.jpg" />
-    <title>demo</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
-    <style>
-        .btn{
-            display: inline-block;
-            padding: 10px 10px;
-            min-width: 80px;
-            text-align: center;
-            border-radius: 3px;
-            background-color: green;
-            margin-bottom: 10px;
-            margin-right: 10px;
-            color: white;
-        }
-    </style>
-    
+  <meta name="twitter:image" content="http://mofang.xiaojukeji.com/images/brand/logo/didichuxing-01.png" />
+  <title>sdk测试页面</title>
+  <style>
+  #demo-button, .test-fb{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: center;
+    padding: 2px;
+    background-color: #fa8919;
+    border-radius: 5px;
+    color: #fff;
+    list-style: none;
+    width: 150px;
+    line-height: 35px;
+    height: 35px;
+    list-style: none;
+    cursor: pointer;
+  }
+  </style>
 </head>
-
 <body>
-    <h1>this is share</h1>
-    <span class="btn" data-cmd="weixin_appmsg">微信分享</span>
-    <span class="btn" data-cmd="weixin_timeline">朋友圈分享</span>
-    <span class="btn" data-cmd="qq_appmsg">QQ分享</span>
-    <span class="btn" data-cmd="qzone">QQ空间分享</span>
-    <span class="btn" data-cmd="share">分享面板</span>
-    <span class="btn" data-cmd="twitter">twitter</span>
-    <span class="btn" data-cmd="whatsapp">whatsapp</span>
-    <span class="btn" data-cmd="messenger">messenger</span>
-    <span class="btn" data-cmd="line">line</span>
-    <span class="btn" data-cmd="facebook">facebook</span>
-    <a class="btn" href="javascript:refresh()">刷新</a>
-    <div id="log"></div>
-    <script type="text/javascript" src="//img6.didistatic.com/static/tms/cdn/z/zepto/zepto/1.0.1/zepto.min.js"></script>
-    <script>
-    function refresh(){
-        location.href = location.href + '?v='+new Date().getTime()
-    }
-        function $log(msg){
-            if(typeof msg == 'string'){
-                msg = msg;
-            }else if(msg){
-                msg = JSON.stringify(msg);
-            }
+<div>
+  <div id="demo-button">点我分享</div>
+  <div class="test-fb">
+    <a href="https://www.facebook.com/dialog/feed?app_id=1460963937280795&amp;display=popup&amp;caption=%E6%BB%B4%E6%BB%B4%E4%B8%80%E4%B8%8B%EF%BC%8C%E9%A9%AC%E4%B8%8A%E5%87%BA%E5%8F%91&amp;description=%E6%BB%B4%E6%BB%B4%E6%89%93%E8%BD%A6%E6%98%AF%E6%97%B6%E4%B8%8B%E6%9C%80%E7%83%AD%E7%9A%84%E6%89%8B%E6%9C%BA%E6%89%93%E8%BD%A6%E7%A5%9E%E5%99%A8%E3%80%82%E8%A6%86%E7%9B%96%E6%9C%80%E5%B9%BF%EF%BC%8C%E7%94%A8%E6%88%B7%E6%9C%80%E5%A4%9A%E3%80%82%E5%AE%9E%E6%97%B6%E5%8F%AB%E8%BD%A6%EF%BC%8C%E7%99%BE%E7%A7%92%E5%BA%94%E7%AD%94%EF%BC%8C%E4%BA%AB%E5%8F%97%E4%B8%93%E8%BD%A6%E5%BE%85%E9%81%87%EF%BC%8C%E9%A9%AC%E4%B8%8A%E4%B8%8B%E8%BD%BD%E8%AF%95%E8%AF%95%E5%90%A7~&amp;link=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F&amp;redirect_uri=https://developers.facebook.com/tools/explorer">点我分享1号</a>
+  </div>
+  <div class="test-fb">
+    <a href="https://www.facebook.com/dialog/feed?app_id=1460963937280795&amp;display=popup&amp;link=https%3A%2F%2Fchriscindy.gitlab.io%2Fplain-html%2Fsdk-test.html&amp;picture=https%3A%2F%2Fchriscindy.gitlab.io%2Fplain-html%2Flogo_new_99_share.png&amp;caption=%E6%BB%B4%E6%BB%B4%E4%B8%80%E4%B8%8B%EF%BC%8C%E9%A9%AC%E4%B8%8A%E5%87%BA%E5%8F%91&amp;description=%E6%BB%B4%E6%BB%B4%E6%89%93%E8%BD%A6%E6%98%AF%E6%97%B6%E4%B8%8B%E6%9C%80%E7%83%AD%E7%9A%84%E6%89%8B%E6%9C%BA%E6%89%93%E8%BD%A6%E7%A5%9E%E5%99%A8%E3%80%82%E8%A6%86%E7%9B%96%E6%9C%80%E5%B9%BF%EF%BC%8C%E7%94%A8%E6%88%B7%E6%9C%80%E5%A4%9A%E3%80%82%E5%AE%9E%E6%97%B6%E5%8F%AB%E8%BD%A6%EF%BC%8C%E7%99%BE%E7%A7%92%E5%BA%94%E7%AD%94%EF%BC%8C%E4%BA%AB%E5%8F%97%E4%B8%93%E8%BD%A6%E5%BE%85%E9%81%87%EF%BC%8C%E9%A9%AC%E4%B8%8A%E4%B8%8B%E8%BD%BD%E8%AF%95%E8%AF%95%E5%90%A7~&amp;redirect_uri=https%3A%2F%2Fchriscindy.gitlab.io%2Fplain-html%2Fsdk-test.html">点我分享2号</a>
+  </div>
+  <hr>
+  <div class="test-fb">
+    <a href="https://www.facebook.com/dialog/share?app_id=1460963937280795&amp;display=popup&amp;href=https%3A%2F%2Fchriscindy.gitlab.io%2Fplain-html%2Fsdk-test.html&amp;redirect_uri=https%3A%2F%2Fchriscindy.gitlab.io%2Fplain-html%2Fsdk-test.html">点我"分享"3号</a>
+  </div>
+  <div class="test-fb">
+    <a href="https://twitter.com/intent/tweet?text=Hello%20World&url=https%3A%2F%2Fchriscindy.gitlab.io%2Fplain-html%2Fsdk-test.html&via=twitterdev">点我分享Twitter</a>
+  </div>
+  <div class="test-fb">
+    <a href="fb-messenger://share?link=https%3A%2F%2Fchriscindy.gitlab.io%2Fplain-html%2Fsdk-test.html">点我分享Messenger</a>
+  </div>
+  <div class="test-fb">
+    <a href="line://msg/text/https%3A%2F%2Fchriscindy.gitlab.io%2Fplain-html%2Fsdk-test.html">点我分享Line</a>
+  </div>
+</div>
+<script src="./sdk.js"></script>
+<script>
+  var demoButton = document.getElementById('demo-button');
+  demoButton.onclick = function() {
+    sdk.setShare({
+    title: '滴滴一下，马上出发',
+    desc: '滴滴打车是时下最热的手机打车神器。覆盖最广，用户最多。实时叫车，百秒应答，享受专车待遇，马上下载试试吧~',
+    imageUrl: 'http://static.diditaxi.com.cn/api/img/logo_new_99_share.png',
+    shareUrl: window.location.href
+    });
+  }
 
-            $('body').prepend(msg + '')
-        }
-    </script>
-    <script type="text/javascript" src="./share.js"></script>
-
-    <script>
-    var log = document.getElementById('log');
-
-
-    window.onerror = function(){
-        log.innerHTML = JSON.stringify(arguments)
-    }
-        $(function() {
-            //log.innerHTML = D;
-            /*D.setShare({
-                title: '新版share',
-                content: '新版sharecontent',
-                icon: 'http://static.udache.com/activity/2017-point-game/images/share-img.png',
-                weixin_timeline_title: '朋友圈标题'
-            })
-
-            D.setShare({
-                type: 'image',
-                image: 'http://static.udache.com/activity/2017-point-game/images/share-img.png'
-            })*/
-
-            $('.btn').on('click', function(){
-                var cmd = $(this).data('cmd');
-
-                if(cmd == 'share'){
-                    D.invokeShare();
-                    return;
-                }
-
-                var data = {
-                    title: '直接拉起啦',
-                    content: '直接拉起的内容',
-                    url: 'https://daisny.github.io/index.html'
-                };
-
-                if('facebook,twitter,messenger,line,whatsapp'.indexOf(cmd) != -1){
-                    data.en = true;
-                }
-
-                D.invokeShare(cmd, data)
-            });
-        });
-    </script>
+</script>
 </body>
-
 </html>
