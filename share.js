@@ -2347,7 +2347,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function setShareInte(channel, opt) {
   var cfg = {
     shareUrl: opt.url,
-    flatform: channel
+    platform: channel
   };
 
   $log(cfg);
