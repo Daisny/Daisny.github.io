@@ -457,7 +457,9 @@ body {
         font-weight: bold; }
 
 .mod-news {
-  margin-top: 72px; }
+  margin-top: 72px;
+  background: url(../image/wenli2.png) no-repeat -30px 20px;
+  background-size: 53.05085% 100%; }
   .mod-news .mod-title {
     text-align: center; }
   .mod-news .swiper-container {
@@ -520,11 +522,15 @@ body {
       opacity: .5; }
   .mod-news .swiper-prev-arr {
     background: url(../image/arrowL.png) no-repeat center; }
+    .mod-news .swiper-prev-arr:hover {
+      background-image: url(../image/arrowLactive.png); }
     .mod-news .swiper-prev-arr.swiper-button-disabled {
       background-image: url(../image/arrowL.png); }
   .mod-news .swiper-next-arr {
     margin-left: 38px;
     background: url(../image/arrowR.png) no-repeat center; }
+    .mod-news .swiper-next-arr:hover {
+      background-image: url(../image/arrowRacitve.png); }
     .mod-news .swiper-next-arr.swiper-button-disabled {
       opacity: .5; }
   @media screen and (max-width: 768px) {
