@@ -12,13 +12,15 @@
 
         if(w <= 768){
             newsSwiper.params.spaceBetween = 10;
-            newsSwiper.params.slidesPerView = 2;console.log(2)
+            newsSwiper.params.slidesPerView = 2;
             /*newsSwiper.reLoop();*/
         }
 
-        if(w <= 414){console.log(3)
+        if(w <= 414){
             newsSwiper.params.slidesPerView = 1;
         }
+
+        bannerSwiper.setWrapperTranslate(0);
     }
 
     function init(){
@@ -33,7 +35,10 @@
         bannerSwiper = new Swiper('#js-banner-swiper', {
             loop: true,
             autoplay: 2000,
-            speed: 600
+            speed: 600,
+            effect: 'fade',
+            centeredSlides: true,
+            autoplayDisableOnInteraction: false
         });
 
         bindEvents();

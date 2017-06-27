@@ -141,7 +141,8 @@ body {
   .top-navs .nav-item {
     display: inline-block;
     vertical-align: top;
-    margin-left: 20px; }
+    margin-left: 20px;
+    position: relative; }
     @media screen and (max-width: 768px) {
       .top-navs .nav-item {
         width: 24%;
@@ -149,6 +150,8 @@ body {
         margin-bottom: 6px; } }
     .top-navs .nav-item > a {
       position: relative;
+      padding: 10px 0;
+      display: block;
       font-size: 15px;
       color: #333;
       -webkit-transition: color .4s ease;
@@ -157,7 +160,7 @@ body {
         content: '';
         display: block;
         position: absolute;
-        bottom: -10px;
+        bottom: 0px;
         width: 0%;
         height: 3px;
         left: 50%;
@@ -166,12 +169,78 @@ body {
         background-color: #66ad51;
         -webkit-transition: width .4s ease;
         transition: width .4s ease; }
+    .top-navs .nav-item.has-children > a:before {
+      display: none; }
     .top-navs .nav-item:hover > a, .top-navs .nav-item.active > a {
       color: #66ad51; }
       @media screen and (min-width: 768px) {
         .top-navs .nav-item:hover > a:before, .top-navs .nav-item.active > a:before {
           width: 100%;
           background-color: #66ad51; } }
+    .top-navs .nav-item .sub-nav {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      margin-left: -20px;
+      min-width: 140px;
+      background-color: white;
+      border-radius: 3px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.175);
+      padding: 4px 0;
+      z-index: 999; }
+      .top-navs .nav-item .sub-nav:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+        left: 15px;
+        top: -4px;
+        background-color: #fff;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      .top-navs .nav-item .sub-nav .nav-item {
+        display: block;
+        margin-left: 0;
+        width: 100%;
+        text-align: left; }
+      .top-navs .nav-item .sub-nav a {
+        display: block;
+        padding: 8px 20px;
+        white-space: nowrap;
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease; }
+        .top-navs .nav-item .sub-nav a:before {
+          display: none; }
+        .top-navs .nav-item .sub-nav a:hover {
+          background-color: #66ad51;
+          color: white; }
+    .top-navs .nav-item:hover .sub-nav {
+      display: block;
+      -webkit-animation: sub-nav .4s ease;
+              animation: sub-nav .4s ease; }
+
+@-webkit-keyframes sub-nav {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
+
+@keyframes sub-nav {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
 
 .sub-banner {
   position: relative;
@@ -340,6 +409,24 @@ body {
     margin-right: 5.08475%; }
     .project-bars .icon-bar:last-child {
       margin-right: 0; }
+    .project-bars .icon-bar:nth-child(1) {
+      -webkit-animation-delay: 1.2s;
+              animation-delay: 1.2s; }
+    .project-bars .icon-bar:nth-child(2) {
+      -webkit-animation-delay: 1.4s;
+              animation-delay: 1.4s; }
+    .project-bars .icon-bar:nth-child(3) {
+      -webkit-animation-delay: 1.6s;
+              animation-delay: 1.6s; }
+    .project-bars .icon-bar:nth-child(4) {
+      -webkit-animation-delay: 1.8s;
+              animation-delay: 1.8s; }
+    .project-bars .icon-bar:nth-child(5) {
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s; }
+    .project-bars .icon-bar:nth-child(6) {
+      -webkit-animation-delay: 2.2s;
+              animation-delay: 2.2s; }
     .project-bars .icon-bar .icon {
       display: inline-block;
       width: 90px;
@@ -362,17 +449,17 @@ body {
       background-image: url(../image/icon6.png); }
     .project-bars .icon-bar.active .name, .project-bars .icon-bar:hover .name {
       color: #66ad51; }
-    .project-bars .icon-bar.active .icon1, .project-bars .icon-bar:hover .icon1 {
+    .project-bars .icon-bar.active .media1, .project-bars .icon-bar:hover .media1 {
       background-image: url(../image/icon1_select.png); }
-    .project-bars .icon-bar.active .icon2, .project-bars .icon-bar:hover .icon2 {
+    .project-bars .icon-bar.active .media2, .project-bars .icon-bar:hover .media2 {
       background-image: url(../image/icon2_select.png); }
-    .project-bars .icon-bar.active .icon3, .project-bars .icon-bar:hover .icon3 {
+    .project-bars .icon-bar.active .media3, .project-bars .icon-bar:hover .media3 {
       background-image: url(../image/icon3_select.png); }
-    .project-bars .icon-bar.active .icon4, .project-bars .icon-bar:hover .icon4 {
+    .project-bars .icon-bar.active .media4, .project-bars .icon-bar:hover .media4 {
       background-image: url(../image/icon4_select.png); }
-    .project-bars .icon-bar.active .icon5, .project-bars .icon-bar:hover .icon5 {
+    .project-bars .icon-bar.active .media5, .project-bars .icon-bar:hover .media5 {
       background-image: url(../image/icon5_select.png); }
-    .project-bars .icon-bar.active .icon6, .project-bars .icon-bar:hover .icon6 {
+    .project-bars .icon-bar.active .media6, .project-bars .icon-bar:hover .media6 {
       background-image: url(../image/icon6_select.png); }
     .project-bars .icon-bar .name {
       display: block;
@@ -453,6 +540,20 @@ body {
       overflow: hidden;
       font-size: 20px;
       color: #2a2a10; }
+    .thumb-list li .media {
+      overflow: hidden; }
+      .thumb-list li .media img {
+        -webkit-transition: -webkit-transform .4s ease;
+        transition: -webkit-transform .4s ease;
+        transition: transform .4s ease;
+        transition: transform .4s ease, -webkit-transform .4s ease; }
+    .thumb-list li:hover .name {
+      color: #66ad51;
+      -webkit-transition: color .4s ease;
+      transition: color .4s ease; }
+    .thumb-list li:hover .media img {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
   @media screen and (max-width: 768px) {
     .thumb-list li {
       width: 49%;
