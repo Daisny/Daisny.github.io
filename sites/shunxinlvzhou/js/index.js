@@ -3,7 +3,7 @@
 
     function onResize(){
         var w = window.innerWidth;
-
+return;
         if(w > 768){
             newsSwiper.params.slidesPerView = 3;
             newsSwiper.params.spaceBetween = 30;
@@ -25,11 +25,20 @@
 
     function init(){
 
-        newsSwiper = new Swiper('.swiper-container', {
+        newsSwiper = new Swiper('#js-news-swiper', {
             spaceBetween: 30,
             slidesPerView: 3,
             nextButton: '.swiper-next-arr',
-            prevButton: '.swiper-prev-arr'
+            prevButton: '.swiper-prev-arr',
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                414: {
+                    slidesPerView: 1
+                }
+            }
         });
 
         bannerSwiper = new Swiper('#js-banner-swiper', {
