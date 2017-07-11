@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>工程案例</title>
     <link rel="stylesheet" href="../lib/swiper3.1.0.min.css">
+    <link rel="stylesheet" href="../lib/viewer.min.css">
     <link rel="stylesheet" href="../css/project.css">
 </head>
 
@@ -146,6 +147,7 @@
 <script src="../lib/jquery.min.js"></script>
 <script src="../lib/swiper3.1.0.min.js"></script>
 <script src="../lib/jquery.pagination.js"></script>
+<script src="../lib/viewer.min.js"></script>
 <script>
     (function(){
         function onPageChange(i){
@@ -162,7 +164,9 @@
             items_per_page: 6,
             num_display_entries: 5,
             num_edge_entries: 2
-        })
+        });
+
+        $('.thumb-list').viewer({});
     })();
 
 </script>

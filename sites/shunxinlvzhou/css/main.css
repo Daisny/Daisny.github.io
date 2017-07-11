@@ -320,6 +320,14 @@ body {
   background-color: #66ad51;
   color: #fff; }
 
+.viewer-container img {
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #fff; }
+
+.viewer-container .viewer-close {
+  background-color: #4caf50; }
+
 @media screen and (max-width: 768px) {
   .w {
     margin: 0 10px; }
