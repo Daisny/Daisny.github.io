@@ -321,9 +321,7 @@ body {
   color: #fff; }
 
 .viewer-container img {
-  padding: 4px;
-  border-radius: 5px;
-  background-color: #fff; }
+  box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.5); }
 
 .viewer-container .viewer-close {
   background-color: #4caf50; }

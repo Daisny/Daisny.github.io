@@ -320,9 +320,7 @@ body {
   color: #fff; }
 
 .viewer-container img {
-  padding: 4px;
-  border-radius: 5px;
-  background-color: #fff; }
+  box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.5); }
 
 .viewer-container .viewer-close {
   background-color: #4caf50; }
@@ -500,6 +498,26 @@ body {
 
 .thumb-list {
   margin-top: 20px; }
+  .thumb-list.withno-arr .arr {
+    display: none !important; }
+  .thumb-list.withno-arr li:nth-child(1) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+  .thumb-list.withno-arr li:nth-child(2) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .thumb-list.withno-arr li:nth-child(3) {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+  .thumb-list.withno-arr li:nth-child(4) {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s; }
+  .thumb-list.withno-arr li:nth-child(5) {
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s; }
+  .thumb-list.withno-arr li:nth-child(6) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
   .thumb-list li {
     float: left;
     width: 32.20339%;

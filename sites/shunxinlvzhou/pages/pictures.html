@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>工程案例</title>
-    <link rel="stylesheet" href="../lib/swiper3.1.0.min.css">
+    <title>图片模板</title>
+    <link rel="stylesheet" href="../lib/viewer.min.css">
     <link rel="stylesheet" href="../css/project.css">
 </head>
 
@@ -47,40 +47,14 @@
     </div>
     <div class="w">
         <div class="sub-banner">
-            <img src="../image/subbanner2.png" alt="" class="media">
+            <img src="../image/subbanner3.png" alt="" class="media">
             <div class="banner-desc">
                 <span class="icon"></span>
-                <span class="name">工程案例</span>
+                <span class="name">图片模板</span>
             </div>
             <div class="text-mask"></div>
         </div>
-        <div class="project-bars">
-            <div class="icon-bar animated zoomIn" data-an="zoomIn">
-                <span class="icon icon1"></span>
-                <span class="name">运动场景</span>
-            </div>
-            <div class="icon-bar animated zoomIn" data-an="zoomIn">
-                <span class="icon icon2"></span>
-                <span class="name">公园景观</span>
-            </div>
-            <div class="icon-bar animated zoomIn" data-an="zoomIn">
-                <span class="icon icon3"></span>
-                <span class="name">广场景观</span>
-            </div>
-            <div class="icon-bar animated zoomIn" data-an="zoomIn">
-                <span class="icon icon4"></span>
-                <span class="name">庭院景观</span>
-            </div>
-            <div class="icon-bar animated zoomIn" data-an="zoomIn">
-                <span class="icon icon5"></span>
-                <span class="name">生态修复</span>
-            </div>
-            <div class="icon-bar animated zoomIn" data-an="zoomIn">
-                <span class="icon icon6"></span>
-                <span class="name">基地建设</span>
-            </div>
-        </div>
-        <ul class="thumb-list clearfix">
+        <ul class="thumb-list withno-arr clearfix">
             <li class="animated fadeInUp">
                 <div class="media">
                     <img src="../image/pro_thumb.jpg" alt="">
@@ -145,6 +119,7 @@
 </body>
 <script src="../lib/jquery.min.js"></script>
 <script src="../lib/jquery.pagination.js"></script>
+<script src="../lib/viewer.min.js"></script>
 <script>
     (function(){
         function onPageChange(i){
@@ -162,6 +137,8 @@
             num_display_entries: 5,
             num_edge_entries: 2
         });
+
+        $('.thumb-list').viewer({});
     })();
 
 </script>
